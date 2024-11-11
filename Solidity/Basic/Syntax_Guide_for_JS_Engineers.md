@@ -25,16 +25,24 @@ contract MyContract {
 ---
 
 ## 2. Function Definitions and Visibility
+
 ```solidity
 function add(uint _a, uint _b) public pure returns (uint) {
     return _a + _b;  // Adds two unsigned integers and returns the result
 }
 ```
-- **`public`**, **`private`**, **`internal`**, **`external`**: Defines function visibility.
-- **`pure`**, **`view`**: Specifies if the function can read or modify state.
-- **`returns`**: Specifies return type(s).
 
----
+### Function Modifiers and Visibility
+
+- **Visibility Modifiers**: Define who can call the function:
+  - **`public`**: Can be called both internally (within the contract) and externally (by users or other contracts).
+  - **`private`**: Only accessible within the contract that defines it, not even derived contracts can call it.
+  - **`internal`**: Accessible within the contract and derived (inherited) contracts but not by external callers.
+  - **`external`**: Can only be called externally, not accessible within the same contract using `this.functionName()`.
+
+- **State Mutability Modifiers**: Specify if the function can read or modify the blockchain’s state:
+  - **`pure`**: Indicates that the function does not read or modify any state variables. It can only use its parameters and constants for calculations. Typically used for utility or helper functions.
+  - **`view`**: Allows the function to read state variables but not modify them. Useful for getter functions or functions that only return information.
 
 ## 3. `payable` Keyword
 The `payable` keyword allows functions to receive Ether.
@@ -73,9 +81,10 @@ assert(balance >= _amount); // Validates critical internal conditions
 Modifiers add reusability to functions.
 ```solidity
 modifier onlyOwner() {
-    require(msg.sender == owner, "Not the owner");  // Checks if caller is contract owner
-    _; // Executes function
+    require(msg.sender == owner, "Not the owner");  // Ensures the caller is the contract owner
+    _;  // Placeholder for the function's original code, which executes here if the condition passes
 }
+
 ```
 
 ---
