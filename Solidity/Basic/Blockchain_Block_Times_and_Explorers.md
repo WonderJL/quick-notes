@@ -20,18 +20,18 @@ This document serves as a quick reference guide for engineers and blockchain ent
 
 ## 2. Blockchain Block Times and Explorers
 
-| Blockchain Platform     | Average Block Time | Blockchain Explorer                                                                 |
-|-------------------------|--------------------|-------------------------------------------------------------------------------------|
-| Bitcoin                 | 10 minutes         | [Blockchain.com Explorer](https://www.blockchain.com/explorer)                      |
-| Ethereum                | 12–15 seconds      | [Etherscan](https://etherscan.io/)                                                  |
-| Litecoin                | 2.5 minutes        | [Blockchair](https://blockchair.com/litecoin)                                       |
-| Cardano                 | 20 seconds         | [CardanoScan](https://cardanoscan.io/)                                              |
-| Solana                  | ~0.4 seconds       | [Solscan](https://solscan.io/)                                                      |
-| Avalanche               | ~2 seconds         | [SnowTrace](https://snowtrace.io/)                                                  |
-| Polkadot                | 6 seconds          | [Polkascan](https://polkascan.io/polkadot)                                          |
-| Binance Smart Chain     | 3 seconds          | [BscScan](https://bscscan.com/)                                                     |
-| Algorand                | ~4.5 seconds       | [AlgoExplorer](https://algoexplorer.io/)                                            |
-| Ripple (XRP Ledger)     | ~4 seconds         | [XRPScan](https://xrpscan.com/)                                                     |
+| Blockchain Platform | Token Name (Symbol) | Average Block Time | Decimal Places | Blockchain Explorer                                            |
+|---------------------|---------------------|--------------------|----------------|----------------------------------------------------------------|
+| Bitcoin             | Bitcoin (BTC)       | 10 minutes         | 8              | [Blockchain.com Explorer](https://www.blockchain.com/explorer) |
+| Ethereum            | Ether (ETH)         | 12–15 seconds      | 18             | [Etherscan](https://etherscan.io/)                             |
+| Litecoin            | Litecoin (LTC)      | 2.5 minutes        | 8              | [Blockchair](https://blockchair.com/litecoin)                  |
+| Cardano             | Cardano (ADA)       | 20 seconds         | 6              | [CardanoScan](https://cardanoscan.io/)                         |
+| Solana              | Solana (SOL)        | ~0.4 seconds       | 9              | [Solscan](https://solscan.io/)                                 |
+| Avalanche           | Avalanche (AVAX)    | ~2 seconds         | 18             | [SnowTrace](https://snowtrace.io/)                             |
+| Polkadot            | Polkadot (DOT)      | 6 seconds          | 10             | [Polkascan](https://polkascan.io/polkadot)                     |
+| Binance Smart Chain | BNB (BNB)           | 3 seconds          | 18             | [BscScan](https://bscscan.com/)                                |
+| Algorand            | Algorand (ALGO)     | ~4.5 seconds       | 6              | [AlgoExplorer](https://algoexplorer.io/)                       |
+| Ripple (XRP Ledger) | XRP (XRP)           | ~4 seconds         | 6              | [XRPScan](https://xrpscan.com/)                                |
 
 Each platform listed above utilizes a blockchain explorer that provides insights into network metrics, such as block times, transaction history, and gas fees. Block times indicate the interval required to add a new block to the blockchain, impacting transaction confirmation speeds and network efficiency.
 
