@@ -1,0 +1,9 @@
+testLimit: 50000
+coverage: true
+corpusDir: corpus
+coverageFormats:
+  - html
+testMode: assertion
+cryticArgs:
+  - "--solc-version=0.8.19"
+  - "--solc-remaps=@openzeppelin/=node_modules/@openzeppelin/"
