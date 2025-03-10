@@ -12,18 +12,27 @@ Solidity uses 32-byte (256-bit) storage slots. By packing multiple smaller varia
 #### Example
 
 ```solidity
-// Inefficient storage usage (3 slots, 32 + 32 + 32 = 96-byte)
+// Inefficient storage usage (3 slots, total spend 32 + 32 + 32 = 96-byte)
 contract Inefficient {
     uint256 a;     // 32 bytes - 1st slot
     uint8 b;       // 1 byte   - 2nd slot
     uint8 c;       // 1 byte   - 3rd slot
 }
 
-// Optimized storage usage (2 slot, total spend 32 + 32 = 64-byte)
+// Optimized storage usage (2 slots, total spend 32 + 32 = 64-byte)
 contract Efficient {
-    uint8 b;       // 1 byte - 1st slot
-    uint8 c;       // 1 byte - 1st slot
+    uint8 b;       // 1 byte   - 1st slot
+    uint8 c;       // 1 byte   - 1st slot
     uint256 a;     // 32 bytes - 2nd slot
+}
+
+// Mixed storage usage (4 slots, total spend 32 + 32 + 32 + 32 = 128-byte)
+contract Mixed {
+    uint8 a;       // 1 byte   - 1st slot
+    uint8 b;       // 1 byte   - 1st slot
+    uint256 c;     // 32 bytes - 2nd slot
+    uint8 d;       // 1 byte   - 3rd slot
+    uint8 e;       // 1 byte   - 4th slot
 }
 ```
 
